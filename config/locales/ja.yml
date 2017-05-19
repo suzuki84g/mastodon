@@ -271,8 +271,8 @@ ja:
         one: "新しい1件の通知 \U0001F418"
         other: "新しい%{count}件の通知 \U0001F418"
     favourite:
-      body: 'あなたのトゥートが %{name} さんにお気に入り登録されました:'
-      subject: "%{name} さんがあなたのトゥートをお気に入りに登録しました"
+      body: 'あなたのトゥートが %{name} さんにナイス！されました:'
+      subject: "%{name} さんがあなたのトゥートをナイス！しました"
     follow:
       body: "%{name} さんにフォローされています"
       subject: "%{name} さんにフォローされています"
@@ -283,8 +283,8 @@ ja:
       body: "%{name} さんから返信がありました:"
       subject: "%{name} さんに返信されました"
     reblog:
-      body: 'あなたのトゥートが %{name} さんにブーストされました:'
-      subject: あなたのトゥートが %{name} さんにブーストされました
+      body: 'あなたのトゥートが %{name} さんにマンメンミ！されました:'
+      subject: あなたのトゥートが %{name} さんにマンメンミ！されました
   pagination:
     next: 次
     prev: 前
@@ -317,7 +317,7 @@ ja:
       unlisted_long: 誰でも見ることができますが、公開タイムラインには表示されません
   stream_entries:
     click_to_show: クリックして表示
-    reblogged: ブーストされました
+    reblogged: マンメンミ！されました
     sensitive_content: 閲覧注意
   time:
     formats:
