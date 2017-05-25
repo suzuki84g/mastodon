@@ -82,6 +82,7 @@ const ja = {
   "navigation_bar.mutes": "ミュートしたユーザー",
   "navigation_bar.preferences": "ユーザー設定",
   "navigation_bar.public_timeline": "連合タイムライン",
+  "navigation_bar.forbeginners": "はじめての方へ",
   "notification.favourite": "{name} さんがあなたのトゥートにナイス！しました",
   "notification.follow": "{name} さんにフォローされました",
   "notification.mention": "{name} さんがあなたに返信しました",
