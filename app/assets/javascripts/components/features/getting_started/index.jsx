@@ -19,7 +19,7 @@ const messages = defineMessages({
   favourites: { id: 'navigation_bar.favourites', defaultMessage: 'Favourites' },
   blocks: { id: 'navigation_bar.blocks', defaultMessage: 'Blocked users' },
   mutes: { id: 'navigation_bar.mutes', defaultMessage: 'Muted users' },
-  info: { id: 'navigation_bar.info', defaultMessage: 'Extended information' }
+  info: { id: 'navigation_bar.info', defaultMessage: 'Extended information' },
   forbeginners: { id: 'navigation_bar.forbeginners', defaultMessage: 'For Beginners' }
 });
 
@@ -40,12 +40,12 @@ const GettingStarted = ({ intl, me }) => {
         <ColumnSubheading text={intl.formatMessage(messages.navigation_subheading)}/>
         <ColumnLink icon='users' hideOnMobile={true} text={intl.formatMessage(messages.community_timeline)} to='/timelines/public/local' />
         <ColumnLink icon='globe' hideOnMobile={true} text={intl.formatMessage(messages.public_timeline)} to='/timelines/public' />
+        <ColumnLink icon='compass' text={intl.formatMessage(messages.forbeginners)} to='/timelines/tag/イカトドンへようこそ' />
         <ColumnLink icon='star' text={intl.formatMessage(messages.favourites)} to='/favourites' />
         {followRequests}
         <ColumnLink icon='volume-off' text={intl.formatMessage(messages.mutes)} to='/mutes' />
         <ColumnLink icon='ban' text={intl.formatMessage(messages.blocks)} to='/blocks' />
         <ColumnSubheading text={intl.formatMessage(messages.settings_subheading)}/>
-        <ColumnLink icon='compass' text={intl.formatMessage(messages.forbeginners)} to='/timelines/tag/イカトドンへようこそ' />
         <ColumnLink icon='book' text={intl.formatMessage(messages.info)} href='/about/more' />
         <ColumnLink icon='cog' text={intl.formatMessage(messages.preferences)} href='/settings/preferences' />
         <ColumnLink icon='sign-out' text={intl.formatMessage(messages.sign_out)} href='/auth/sign_out' method='delete' />
