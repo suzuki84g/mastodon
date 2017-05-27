@@ -22,6 +22,14 @@ class Account < ApplicationRecord
   validates_attachment_size :header, less_than: 2.megabytes
 
   before_post_process :set_file_extensions
+  before_post_process lambda {
+    unless header.blank?
+      if header_content_type == 'image/gif' && header_file_size > 300000
+        # ここでファイルチェックしとくとGIFうｐ処理が動いてくれる
+        return false
+      end
+    end
+  }
 
   # Local user profile validations
   validates :display_name, length: { maximum: 30 }, if: 'local?'
