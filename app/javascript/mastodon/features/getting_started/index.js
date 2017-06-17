@@ -65,6 +65,7 @@ class GettingStarted extends ImmutablePureComponent {
     }
 
     navItems = navItems.concat([
+      <ColumnLink key='8' icon='compass' text={intl.formatMessage(messages.forbeginners)} to='/timelines/tag/イカトドンへようこそ' />,
       <ColumnLink key='4' icon='star' text={intl.formatMessage(messages.favourites)} to='/favourites' />,
     ]);
 
@@ -75,7 +76,6 @@ class GettingStarted extends ImmutablePureComponent {
     navItems = navItems.concat([
       <ColumnLink key='6' icon='volume-off' text={intl.formatMessage(messages.mutes)} to='/mutes' />,
       <ColumnLink key='7' icon='ban' text={intl.formatMessage(messages.blocks)} to='/blocks' />,
-      <ColumnLink key='8' icon='ban' text={intl.formatMessage(messages.forbeginners)} to='/timelines/tag/イカトドンへようこそ' />,
     ]);
 
     return (
