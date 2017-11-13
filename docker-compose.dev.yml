@@ -2,12 +2,12 @@ version: '2'
 services:
   db:
     restart: always
-    image: postgres:alpine
+    image: postgres:9.6-alpine
     ports:
       - "5432:5432"
 
   redis:
     restart: always
-    image: redis:alpine
+    image: redis:4.0-alpine
     ports:
       - "6379:6379"
