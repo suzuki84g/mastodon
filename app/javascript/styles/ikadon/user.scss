@@ -159,6 +159,7 @@ $transition: all 100ms ease-in;
 /* box scroll */
 .column {
 	> .scrollable {
+		contain: content;
 		background: $dark_stripe !important;
 		border-radius: 0 0 15px 15px !important;
 	}
@@ -255,6 +256,7 @@ button.icon-button i.fa-retweet:hover {
 
 /* toot option icon */
 .compose-form__buttons {
+	padding: .5rem;
 	background: $gray_1 !important;
 	box-shadow: none !important;
 	border-radius: 15px !important;
@@ -440,4 +442,18 @@ button.icon-button i.fa-retweet:hover {
 	&:hover {
 		background: $bg_opacity_0 !important;
 	}
+}
+
+.compose-form {
+	.compose-form__buttons-wrapper {
+		background-color: transparent !important;
+		padding-left: 0;
+		padding-right: 0;
+		
+		.character-counter__wrapper {
+			.character-counter {
+				color: #fff !important;
+			}
+		}
+	}	
 }
