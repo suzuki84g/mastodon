@@ -40,15 +40,10 @@
   "bundle_modal_error.message": "コンポーネントの読み込み中に問題が発生しました。",
   "bundle_modal_error.retry": "再試行",
   "column.blocks": "ブロックしたユーザー",
-<<<<<<< HEAD
   "column.community": "ハイカラタイムライン",
   "column.favourites": "ナイス！",
-=======
-  "column.community": "ローカルタイムライン",
   "column.direct": "ダイレクトメッセージ",
   "column.domain_blocks": "非表示にしたドメイン",
-  "column.favourites": "お気に入り",
->>>>>>> 4d81809f36fcbfe787e23d490f2cb0ad943ab32c
   "column.follow_requests": "フォローリクエスト",
   "column.home": "ホーム",
   "column.lists": "リスト",
@@ -163,13 +158,9 @@
   "missing_indicator.sublabel": "見つかりませんでした",
   "mute_modal.hide_notifications": "このユーザーからの通知を隠しますか？",
   "navigation_bar.blocks": "ブロックしたユーザー",
-<<<<<<< HEAD
   "navigation_bar.community_timeline": "ハイカラタイムライン",
-=======
-  "navigation_bar.community_timeline": "ローカルタイムライン",
   "navigation_bar.direct": "ダイレクトメッセージ",
   "navigation_bar.domain_blocks": "非表示にしたドメイン",
->>>>>>> 4d81809f36fcbfe787e23d490f2cb0ad943ab32c
   "navigation_bar.edit_profile": "プロフィールを編集",
   "navigation_bar.favourites": "ナイス！",
   "navigation_bar.follow_requests": "フォローリクエスト",
@@ -256,11 +247,7 @@
   "standalone.public_title": "今こんな話をしています...",
   "status.cannot_reblog": "この投稿はマンメンミ！できません",
   "status.block": "@{name}さんをブロック",
-<<<<<<< HEAD
-=======
-  "status.cancel_reblog_private": "ブースト解除",
-  "status.cannot_reblog": "この投稿はブーストできません",
->>>>>>> 4d81809f36fcbfe787e23d490f2cb0ad943ab32c
+  "status.cancel_reblog_private": "マンメンミ！解除",
   "status.delete": "削除",
   "status.direct": "@{name}さんにダイレクトメッセージ",
   "status.embed": "埋め込み",
@@ -275,12 +262,8 @@
   "status.pin": "プロフィールに固定表示",
   "status.pinned": "固定されたトゥート",
   "status.reblog": "ブースト",
-<<<<<<< HEAD
+  "status.reblog_private": "マンメンミ！",
   "status.reblogged_by": "{name}さんがマンメンミ！",
-=======
-  "status.reblog_private": "ブースト",
-  "status.reblogged_by": "{name}さんがブースト",
->>>>>>> 4d81809f36fcbfe787e23d490f2cb0ad943ab32c
   "status.reply": "返信",
   "status.replyAll": "全員に返信",
   "status.report": "@{name}さんを通報",
