@@ -97,10 +97,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   end
 
-  config.vm.hostname = "mastodon.dev"
+  config.vm.hostname = "mastodon.test"
 
   # This uses the vagrant-hostsupdater plugin, and lets you
-  # access the development site at http://mastodon.dev.
+  # access the development site at http://mastodon.test.
   # To install:
   #   $ vagrant plugin install vagrant-hostsupdater
   if defined?(VagrantPlugins::HostsUpdater)
