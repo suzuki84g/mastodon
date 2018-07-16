@@ -26,7 +26,7 @@ const messages = defineMessages({
   blocks: { id: 'navigation_bar.blocks', defaultMessage: 'Blocked users' },
   domain_blocks: { id: 'navigation_bar.domain_blocks', defaultMessage: 'Hidden domains' },
   mutes: { id: 'navigation_bar.mutes', defaultMessage: 'Muted users' },
-  info: { id: 'navigation_bar.info', defaultMessage: 'Extended information' },
+  info: { id: 'navigation_bar.info', defaultMessage: 'About this instance' },
   forbeginners: { id: 'navigation_bar.forbeginners', defaultMessage: 'For Beginners' },
   pins: { id: 'navigation_bar.pins', defaultMessage: 'Pinned toots' },
   lists: { id: 'navigation_bar.lists', defaultMessage: 'Lists' },
@@ -86,6 +86,7 @@ export default class GettingStarted extends ImmutablePureComponent {
     if (multiColumn) {
       navItems.push(
         <ColumnSubheading key={i++} text={intl.formatMessage(messages.discover)} />,
+        <ColumnLink key={i++} icon='compass' text={intl.formatMessage(messages.forbeginners)} to='/timelines/tag/イカトドンへようこそ' />,
         <ColumnLink key={i++} icon='users' text={intl.formatMessage(messages.community_timeline)} to='/timelines/public/local' />,
         <ColumnLink key={i++} icon='globe' text={intl.formatMessage(messages.public_timeline)} to='/timelines/public' />,
         <ColumnSubheading key={i++} text={intl.formatMessage(messages.personal)} />
@@ -95,7 +96,6 @@ export default class GettingStarted extends ImmutablePureComponent {
     }
 
     navItems.push(
-      <ColumnLink key={i++} icon='compass' text={intl.formatMessage(messages.forbeginners)} to='/timelines/tag/イカトドンへようこそ' />,
       <ColumnLink key={i++} icon='envelope' text={intl.formatMessage(messages.direct)} to='/timelines/direct' />,
       <ColumnLink key={i++} icon='star' text={intl.formatMessage(messages.favourites)} to='/favourites' />,
       <ColumnLink key={i++} icon='list-ul' text={intl.formatMessage(messages.lists)} to='/lists' />
