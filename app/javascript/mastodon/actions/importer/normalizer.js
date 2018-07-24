@@ -1,5 +1,6 @@
 import escapeTextContentForBrowser from 'escape-html';
 import emojify from '../../features/emoji/emoji';
+import codeHighlight from '../../features/code_highlight';
 import { unescapeHTML } from '../../utils/html';
 
 const domParser = new DOMParser();
@@ -55,7 +56,7 @@ export function normalizeStatus(status, normalOldStatus) {
     const emojiMap      = makeEmojiMap(normalStatus);
 
     normalStatus.search_index = domParser.parseFromString(searchContent, 'text/html').documentElement.textContent;
-    normalStatus.contentHtml  = emojify(normalStatus.content, emojiMap);
+    normalStatus.contentHtml  = emojify(codeHighlight(normalStatus.content), emojiMap);
     normalStatus.spoilerHtml  = emojify(escapeTextContentForBrowser(spoilerText), emojiMap);
     normalStatus.hidden       = spoilerText.length > 0 || normalStatus.sensitive;
   }

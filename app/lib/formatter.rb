@@ -33,6 +33,7 @@ class Formatter
     html = raw_content
     html = "RT @#{prepend_reblog} #{html}" if prepend_reblog
     html = encode_and_link_urls(html, linkable_accounts)
+    html = code_literal_to_blocks(html)
     html = encode_custom_emojis(html, status.emojis) if options[:custom_emojify]
     html = simple_format(html, {}, sanitize: false)
     html = html.delete("\n")
@@ -117,6 +118,35 @@ class Formatter
     if tag[1] == '/' then -1
     elsif tag[-2] == '/' then 0
     else 1
+    end
+  end
+
+  def code_literal_to_blocks(html)
+    marks = []
+    index = 0
+
+    # stack multi-line codeblock
+    html = html.gsub(/^```(?<lang>[^\n]*)\n(?<code>.*?)\n```$/m) do |match|
+      lang = $1
+      code = $2
+      marker = "[[[codeblock#{index += 1}]]]"
+      block_html = "<pre><code #{ lang ? "data-language=\"#{ sanitize(lang, Sanitize::Config::MASTODON_STRICT).gsub(/["']/, '') }\"" : "" }>#{ sanitize(code, Sanitize::Config::MASTODON_STRICT) }</code></pre>"
+      marks << [marker, block_html]
+      marker
+    end
+
+    # stack single-line codeblock
+    html = html.gsub(/`(?<code>[^`\n]+?)`/) do |match|
+      code = $1
+      marker = "[[[codeblock#{index += 1}]]]"
+      block_html = "<code class=\"singleline\">#{ sanitize(code, Sanitize::Config::MASTODON_STRICT) }</code>"
+      marks << [marker, block_html]
+      marker
+    end
+
+    # replace
+    marks.reverse.reduce(html) do |html, (marker, block_html)|
+      html.gsub(marker, block_html)
     end
   end
 
