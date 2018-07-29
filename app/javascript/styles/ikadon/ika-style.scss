@@ -116,8 +116,14 @@ $transition: all 100ms ease-in;
 	border-radius: 0 0 15px 15px;
 }
 
-.account__avatar {
-	clip-path: polygon(50% 0, 0 50%, 15% 50%, 15% 100%, 26% 90%, 37% 100%, 50% 90%, 62% 100%, 74% 90%, 85% 100%, 85% 50%, 100% 50%);
+.drawer__inner__mastodon {
+	background: none;
+	background-image: $ink;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	img {
+		display: none;
+	}
 }
 
 .account {
@@ -188,7 +194,7 @@ $transition: all 100ms ease-in;
 }
 
 /* 'TOOT' button */
-.compose-form__publish-button-wrapper > .button {
+.drawer__pager .compose-form .compose-form__publish-button-wrapper > .button {
 	background: $orange_1;
 	border-radius: 15px;
 	font-size: 0;
@@ -312,6 +318,9 @@ button.icon-button i.fa-retweet:hover {
 		background: $white_01;
 	}
 }
+.focusable:focus {
+	background: $black_05;
+}
 
 
 /* more */
@@ -333,6 +342,10 @@ button.icon-button i.fa-retweet:hover {
 	}
 }
 
+.search-results__header {
+	background: $black_05;
+}
+
 
 /* reply */
 .reply-indicator {
@@ -346,8 +359,8 @@ button.icon-button i.fa-retweet:hover {
 	color: #fff;
 }
 
-.reply-indicator__display-avatar > .account__avatar {
-	box-shadow: none;
+.account__avatar {
+	border-radius: 50% !important;
 }
 
 
@@ -360,10 +373,15 @@ button.icon-button i.fa-retweet:hover {
 	background: $dark_stripe;
 }
 .column-link {
-	background: $dark_1;
+	background: $bg_opacity_0;
 	&:hover {
 		background: $orange_stripe;
 	}
+}
+
+.getting-started__footer {
+	border-radius: 0 0 15px 15px;
+	background: $dark_stripe;
 }
 
 .columns-area > div:nth-child(3) .column-header {
@@ -379,16 +397,13 @@ button.icon-button i.fa-retweet:hover {
 	color: $black_1;
 }
 
-.getting-started {
-	background: $ink;
-	background-repeat: no-repeat;
-	background-position: center bottom;
-}
-
 .column-settings--outer,
 .detailed-status,
 .detailed-status__action-bar,
-.account__header > div,
+.account__header > div {
+	background: none;
+}
+
 .column-header__collapsible > div {
 	background: $dark_1;
 }
@@ -468,5 +483,35 @@ button.icon-button i.fa-retweet:hover {
 	background: $bg_opacity_0;
 	&:hover {
 		background: $bg_opacity_0;
+	}
+}
+
+
+/* egeneration */
+.regeneration-indicator {
+	border-radius: 15px;
+	background: $dark_stripe;
+}
+
+
+/* SP */
+@media (max-width: 768px) {
+	.empty-column-indicator {
+		background: $dark_1 !important;
+	}
+	.column > .scrollable {
+		background: $dark_1 !important;
+	}
+	.drawer__inner {
+		background: $dark_1 !important;
+	}
+	.drawer__inner.darker {
+		background: $dark_1;
+	}
+	.flex-spacer {
+		background: $dark_stripe !important;
+	}
+	.floating-action-button {
+		background: $orange_1;
 	}
 }
