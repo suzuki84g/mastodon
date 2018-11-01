@@ -85,6 +85,7 @@ class GettingStarted extends ImmutablePureComponent {
     let height = (multiColumn) ? 0 : 60;
 
     if (multiColumn) {
+      const columnLinkCount = 3;
       navItems.push(
         <ColumnSubheading key={i++} text={intl.formatMessage(messages.discover)} />,
         <ColumnLink key={i++} icon='compass' text={intl.formatMessage(messages.forbeginners)} to='/timelines/tag/イカトドンへようこそ' />,
@@ -93,7 +94,7 @@ class GettingStarted extends ImmutablePureComponent {
         <ColumnSubheading key={i++} text={intl.formatMessage(messages.personal)} />
       );
 
-      height += 34*2 + 48*2;
+      height += 34*2 + 48*columnLinkCount;
     }
 
     navItems.push(
