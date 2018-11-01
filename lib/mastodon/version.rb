@@ -9,11 +9,11 @@ module Mastodon
     end
 
     def minor
-      4
+      6
     end
 
     def patch
-      4
+      1
     end
 
     def pre
@@ -30,6 +30,10 @@ module Mastodon
 
     def to_s
       [to_a.join('.'), flags].join
+    end
+
+    def repository
+      'koba-lab/mastodon'
     end
 
     def source_base_url
