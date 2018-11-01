@@ -125,7 +125,6 @@ class Formatter
     end
   end
 
-<<<<<<< HEAD
   def code_literal_to_blocks(html)
     marks = []
     index = 0
@@ -155,10 +154,7 @@ class Formatter
     end
   end
 
-  def encode_custom_emojis(html, emojis)
-=======
   def encode_custom_emojis(html, emojis, animate = false)
->>>>>>> ba06a5f485d305bc917506828fd5cb20b3f0c226
     return html if emojis.empty?
 
     emoji_map = if animate
