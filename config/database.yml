@@ -3,9 +3,7 @@ default: &default
   pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 5 %>
   timeout: 5000
   encoding: unicode
-  host: <%= ENV['DB_HOST'] || 'localhost' %>
-  port: <%= ENV['DB_PORT'] || 5432 %>
-  username: <%= ENV['DB_USER'] || 'postgres' %>
+  sslmode: <%= ENV['DB_SSLMODE'] || "prefer" %>
 
 development:
   <<: *default
@@ -34,3 +32,4 @@ production:
   host: <%= ENV['DB_HOST'] || 'localhost' %>
   port: <%= ENV['DB_PORT'] || 5432 %>
   prepared_statements: <%= ENV['PREPARED_STATEMENTS'] || 'true' %>
+
