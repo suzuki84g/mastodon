@@ -27,8 +27,6 @@ const messages = defineMessages({
   blocks: { id: 'navigation_bar.blocks', defaultMessage: 'Blocked users' },
   domain_blocks: { id: 'navigation_bar.domain_blocks', defaultMessage: 'Hidden domains' },
   mutes: { id: 'navigation_bar.mutes', defaultMessage: 'Muted users' },
-  info: { id: 'navigation_bar.info', defaultMessage: 'About this instance' },
-  forbeginners: { id: 'navigation_bar.forbeginners', defaultMessage: 'For Beginners' },
   pins: { id: 'navigation_bar.pins', defaultMessage: 'Pinned toots' },
   lists: { id: 'navigation_bar.lists', defaultMessage: 'Lists' },
   discover: { id: 'navigation_bar.discover', defaultMessage: 'Discover' },
@@ -36,6 +34,7 @@ const messages = defineMessages({
   security: { id: 'navigation_bar.security', defaultMessage: 'Security' },
   menu: { id: 'getting_started.heading', defaultMessage: 'Getting started' },
   profile_directory: { id: 'getting_started.directory', defaultMessage: 'Profile directory' },
+  forbeginners: { id: 'navigation_bar.forbeginners', defaultMessage: 'For Beginners' },
 });
 
 const mapStateToProps = state => ({
