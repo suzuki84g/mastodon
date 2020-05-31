@@ -23,6 +23,8 @@ export const ANNOUNCEMENTS_REACTION_UPDATE = 'ANNOUNCEMENTS_REACTION_UPDATE';
 
 export const ANNOUNCEMENTS_TOGGLE_SHOW = 'ANNOUNCEMENTS_TOGGLE_SHOW';
 
+export const ANNOUNCEMENTS_TOGGLE_COMPOSE_VIEW = 'ANNOUNCEMENTS_TOGGLE_COMPOSE_VIEW';
+
 const noOp = () => {};
 
 export const fetchAnnouncements = (done = noOp) => (dispatch, getState) => {
@@ -177,4 +179,8 @@ export const toggleShowAnnouncements = () => ({
 export const deleteAnnouncement = id => ({
   type: ANNOUNCEMENTS_DELETE,
   id,
+});
+
+export const toggleComposeView = () => ({
+  type: ANNOUNCEMENTS_TOGGLE_COMPOSE_VIEW,
 });

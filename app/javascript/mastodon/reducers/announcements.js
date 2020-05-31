@@ -11,6 +11,7 @@ import {
   ANNOUNCEMENTS_TOGGLE_SHOW,
   ANNOUNCEMENTS_DELETE,
   ANNOUNCEMENTS_DISMISS_SUCCESS,
+  ANNOUNCEMENTS_TOGGLE_COMPOSE_VIEW,
 } from '../actions/announcements';
 import { Map as ImmutableMap, List as ImmutableList, fromJS } from 'immutable';
 
@@ -18,6 +19,7 @@ const initialState = ImmutableMap({
   items: ImmutableList(),
   isLoading: false,
   show: false,
+  composeView: true,
 });
 
 const updateReaction = (state, id, name, updater) => state.update('items', list => list.map(announcement => {
@@ -96,6 +98,10 @@ export default function announcementsReducer(state = initialState, action) {
 
       return list;
     });
+  case ANNOUNCEMENTS_TOGGLE_COMPOSE_VIEW:
+    return state.update('composeView', visible => (
+      !visible
+    ));
   default:
     return state;
   }
