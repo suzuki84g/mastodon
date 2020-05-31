@@ -457,6 +457,9 @@ export function selectComposeSuggestion(position, token, suggestion, path) {
     } else if (suggestion.type === 'account') {
       completion    = getState().getIn(['accounts', suggestion.id, 'acct']);
       startPosition = position;
+      if (token[0] == ':') {
+        completion  = `@${completion}:`;
+      }
     }
 
     dispatch({
