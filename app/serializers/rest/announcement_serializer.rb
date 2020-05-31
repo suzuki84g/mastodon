@@ -10,6 +10,7 @@ class REST::AnnouncementSerializer < ActiveModel::Serializer
   has_many :statuses
   has_many :tags, serializer: REST::StatusSerializer::TagSerializer
   has_many :emojis, serializer: REST::CustomEmojiSerializer
+  has_many :all_emojis, serializer: REST::CustomEmojiSerializer
   has_many :reactions, serializer: REST::ReactionSerializer
 
   def current_user?
