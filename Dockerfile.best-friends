@@ -4,6 +4,8 @@ FROM ${BASE_IMAGE}
 
 WORKDIR /opt/mastodon
 
+RUN gem update --system 3.0.8 && gem update --system && gem install bundler
+
 USER mastodon
 
 ADD --chown=mastodon:mastodon Gemfile* /opt/mastodon/
