@@ -87,7 +87,7 @@ class Formatter
 
   def format_field(account, str, **options)
     html = account.local? ? encode_and_link_urls(str, me: true) : reformat(str)
-    html = encode_custom_emojis(html, account.emojis, options[:autoplay]) if options[:custom_emojify]
+    html = encode_custom_emojis(html, account.all_emojis, options[:autoplay]) if options[:custom_emojify]
     html.html_safe # rubocop:disable Rails/OutputSafety
   end
 
