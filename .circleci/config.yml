@@ -283,3 +283,6 @@ workflows:
       - check-i18n:
           requires:
             - install-ruby2.7
+      - docker-build:
+          requires:
+            - build
