@@ -12,7 +12,7 @@ RSpec.describe Friends::ProfileEmoji::Emoji do
   describe '.from_text' do
     subject { described_class.from_text(text, domain) }
 
-    let(:account1) { Fabricate(:account) }
+    let(:account1) { Fabricate(:account, username: 'TEST') }
     let(:account2) { Fabricate(:account, domain: 'example.com') }
 
     context 'when domain not given' do

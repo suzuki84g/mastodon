@@ -11,7 +11,7 @@ module Friends
 
       SCAN_RE = /(?<=[^[:alnum:]:]|\n|^)
         (:#{SHORTCODE_RE_FRAGMENT}:)
-        (?=[^[:alnum:]:]|$)/x
+        (?=[^[:alnum:]:]|$)/ix
 
       attributes :account
 
