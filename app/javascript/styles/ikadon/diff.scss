@@ -1,4 +1,47 @@
-// 一旦空ファイルに変更。
+
+// wrap
+// bodyのdarkに`$gray_stripe`を重ねている
 .ui {
-	background: $gray_stripe;
+  background: $gray_stripe;
 }
+
+/* column */
+.column > .scrollable,
+.getting-started,
+.column-inline-form,
+.error-column,
+.regeneration-indicator {
+  background: $dark_stripe;
+}
+
+/* drawer */
+.drawer {
+  .search {
+    background: $dark_stripe;
+  }
+  &__header {
+    background: $pink_jagged;
+  }
+  &__inner {
+    background: $dark_stripe;
+    &__mastodon {
+      background: none;
+      background-image: $ink;
+      background-repeat: no-repeat;
+      background-position: center;
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+.column-header {
+  background: $gray_jagged;
+  color: $black_1;
+  &__button {
+    background: none;
+    color: $black_1;
+  }
+}
+
