@@ -21,6 +21,7 @@
   }
   &__header {
     background: $pink_jagged;
+    border-radius: 15px 15px 0 0;
   }
   &__inner {
     background: $dark_stripe;
@@ -28,7 +29,8 @@
       background: none;
       background-image: $ink;
       background-repeat: no-repeat;
-      background-position: center;
+      // todo:PCレイアウトだとbottom指定で画像が消えるかも
+      background-position: left bottom;
       img {
         display: none;
       }
@@ -36,8 +38,18 @@
   }
 }
 
+/* tab */
+.tabs-bar {
+	background: $pink_jagged;
+	border-radius: 15px 15px 0 0;
+	border: none;
+	overflow: hidden;
+}
+
+/* column */
 .column-header {
   background: $gray_jagged;
+  border-radius: 15px 15px 0 0;
   color: $black_1;
   &__button {
     background: none;
