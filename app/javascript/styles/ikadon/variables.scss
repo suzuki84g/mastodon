@@ -1,43 +1,25 @@
-// `ika-style.scss`から移植したい
+// `ika-style.scss`から移植
 
-// Dependent colors
-$black: #000000;
-$white: #ffffff;
+$gray_stripe: repeating-linear-gradient(45deg, #C9C7C5, #C9C7C5 10px, #BDBBB9 0, #BDBBB9 20px);
+$pink_stripe: repeating-linear-gradient(45deg, #F1317F, #F1317F 10px, #DE2C6F 0, #DE2C6F 20px);
+$orange_stripe: repeating-linear-gradient(45deg, #E76615, #E76615 10px, #FC7218 0, #FC7218 20px);
+$dark_stripe: repeating-linear-gradient(45deg, #1f1f1f, #1f1f1f 10px, #252525 0, #252525 20px);
 
-$classic-base-color: #282c37;
-$classic-primary-color: #9baec8;
-$classic-secondary-color: #d9e1e8;
-$classic-highlight-color: #2b90d9;
-
-// Differences
-$success-green: lighten(#3c754d, 8%);
-
-$base-overlay-background: $white !default;
-$valid-value-color: $success-green !default;
-
-$ui-base-color: $classic-secondary-color !default;
-$ui-base-lighter-color: #b0c0cf;
-$ui-primary-color: #9bcbed;
-$ui-secondary-color: $classic-base-color !default;
-$ui-highlight-color: #2b90d9;
-
-$primary-text-color: $black !default;
-$darker-text-color: $classic-base-color !default;
-$dark-text-color: #444b5d;
-$action-button-color: #606984;
-
-$inverted-text-color: $black !default;
-$lighter-text-color: $classic-base-color !default;
-$light-text-color: #444b5d;
-
-//Newly added colors
-$account-background-color: $white !default;
-
-//Invert darkened and lightened colors
-@function darken($color, $amount) {
-  @return hsl(hue($color), saturation($color), lightness($color) + $amount);
-}
-
-@function lighten($color, $amount) {
-  @return hsl(hue($color), saturation($color), lightness($color) - $amount);
-}
+$bg_opacity_0: rgba(0,0,0,0);
+$black_1: #000;
+$black_05: rgba(0,0,0,.5);
+$white_1: #fff;
+$white_05: rgba(255,255,255,.5);
+$white_03: rgba(255,255,255,.3);
+$white_01: rgba(255,255,255,.1);
+$orange_1: #FD751D;
+$blue_1: #1613e6;
+$lightblue_1: #1dc8ef;
+$green_1: #21ea80;
+$yellow_1: #c9f21b;
+$purple_1: #9600ff;
+$gray_1: #C4C2C0;
+$dark_1: #272727;
+$dark_09: rgba(39,39,39,.9);
+$shadow: rgba(255,255,255,.2);
+$transition: all 100ms ease-in;
