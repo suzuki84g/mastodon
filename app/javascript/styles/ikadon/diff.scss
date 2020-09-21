@@ -10,7 +10,7 @@
 .error-column,
 .regeneration-indicator,
 .empty-column-indicator,
-.notification__filter-bar >button {
+.notification__filter-bar > button {
   background: $dark_stripe;
 }
 
@@ -31,10 +31,7 @@
   &__inner {
     background: $dark_stripe;
     &__mastodon {
-      background: none;
-      background-image: $ink;
-      background-repeat: no-repeat;
-      background-position: left bottom;
+      background: $ink bottom  / contain no-repeat;
       img {
         display: none;
       }
@@ -46,31 +43,16 @@
         margin-bottom: 15px;
         .reply-indicator {
           &__display-name, &__content {
-            color: #ffffff;
+            color: $white_1
           }
         }
       }
     }
   }
   .button--block {
-    // 既存の入力文字を無効化
     background: $orange_1;
-    border-radius: 15px;
-    font-size: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    &:before {
-      content: '　スプラ　';  //:hover時と文字数を揃えるため…
-      display: block;
-      font-size: 14px;
-    }
     &:hover {
       background: $purple_1;
-      &:before {
-        content: 'トゥーン！';
-        display: block;
-        font-size: 14px;
-      }
     }
   }
 }
@@ -94,27 +76,34 @@
 
 /* column */
 // advanced web interface
+// todo:Review確認から `https://github.com/koba-lab/mastodon/pull/19/files/0279f73155c0dded8d4e7b889de3c7ae77bb013c#r491963901`
 .columns-area {
   .column-header {
     background: $gray_jagged;
     border-radius: 15px 15px 0 0;
     color: $black_1;
-    &__button,
-    &:active {
+    &__button {
       background: none;
       color: $black_1;
+      transition: $transition;
       &:hover, &:focus {
         background: $black_05;
-        border-radius: 0 15px 0 0;
         color: $white_1;
+        outline: none;
       }
     }
     &__back-button {
       background: none;
       color: $black_1;
     }
-    &__collapsible >div {
+    &__collapsible > div {
       background: $dark_1;
+    }
+    &.active {
+      .column-header__icon {
+        color: $blueGray_1;
+        text-shadow: 0 0 10px rgba($blueGray_1, 0.4);
+      }
     }
   }
   .column:nth-child(3) .column-header {
@@ -147,9 +136,8 @@
 }
 
 /* account */
-.account__header
-  >div {
-    background: none;
+.account__header > div {
+  background: none;
 }
 
 /* search */
@@ -177,10 +165,11 @@
 }
 
 /* icon-color */
+// todo:Review確認 https://github.com/koba-lab/mastodon/pull/19/files/0279f73155c0dded8d4e7b889de3c7ae77bb013c#r492245593
 .icon-button {
   color: $white_1;
   &.active {
-    color: $orange_1 !important;
+    color: $orange_1;
   }
   &:hover, &:active, &:focus {
     color: $orange_1
@@ -200,18 +189,18 @@ button.icon-button i.fa-retweet:hover {
 .star-icon.active {
   color: $orange_1;
   &.active {
-    color: $orange_1 !important;
+    color: $orange_1;
   }
 }
 .notification__message {
   .fa-star {
-    color: $yellow_1 !important;
+    color: $yellow_1;
   }
   .fa-user-plus {
-    color: $lightblue_1 !important;
+    color: $lightblue_1;
   }
   .fa-retweet {
-    color: $green_1 !important;
+    color: $green_1;
   }
 }
 
@@ -227,3 +216,5 @@ button.icon-button i.fa-retweet:hover {
     }
   }
 }
+
+// todo:Review確認 https://github.com/koba-lab/mastodon/pull/19/files/0279f73155c0dded8d4e7b889de3c7ae77bb013c#r492247571
