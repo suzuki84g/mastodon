@@ -94,7 +94,8 @@
 
 /* column */
 // advanced web interface
-.columns-area {
+.columns-area,
+.columns-area__panels {
   .column-header {
     background: $gray_jagged;
     border-radius: 15px 15px 0 0;
@@ -117,11 +118,18 @@
       background: $dark_1;
     }
   }
-  .column:nth-child(3) .column-header {
-    background: $blue_jagged;
+  [aria-label="ホーム"],
+  [aria-label="Home"] {
+    .column-header {
+      background: $blue_jagged;
+    }
   }
-  .column:nth-child(4) .column-header {
-    background: $yellow_jagged;
+  [aria-label="ハイカラタイムライン"],
+  [aria-label="ローカルタイムライン"],
+  [aria-label="Local Time Line"] {
+    .column-header {
+      background: $yellow_jagged;
+    }
   }
 }
 .column-back-button {
@@ -227,3 +235,5 @@ button.icon-button i.fa-retweet:hover {
     }
   }
 }
+
+/* SP */
