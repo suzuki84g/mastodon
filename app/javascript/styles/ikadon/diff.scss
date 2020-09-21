@@ -79,6 +79,22 @@
   border-radius: 15px 15px 0 0;
   color: $white_1;
 }
+.getting-started {
+  background: $dark_stripe;
+  &__wrapper {
+    background: none;
+  }
+}
+.column-link {
+	background: $bg_opacity_0;
+	&:hover {
+		background: $orange_stripe;
+	}
+}
+.column-subheading {
+	background: $white_03;
+	color: $black_1;
+}
 
 /* account */
 .account__header
@@ -86,16 +102,26 @@
     background: none;
 }
 
+/* search */
+.search {
+  &__input {
+    background: $dark_stripe;
+    &:focus {
+      background: $dark_stripe;
+    }
+  }
+}
+
 /* scrollbar */
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb:hover {
-	background: $white_05;
+  background: $white_05;
 }
 
 ::-webkit-scrollbar:active {
-	width: 8px;
-	background: $bg_opacity_0;
-	&:hover {
-		background: $bg_opacity_0;
-	}
+  width: 8px;
+  background: $bg_opacity_0;
+  &:hover {
+    background: $bg_opacity_0;
+  }
 }
