@@ -64,6 +64,38 @@
   &__button {
     background: none;
     color: $black_1;
+    &:active, &:hover, &:focus {
+      background: none;
+      color: $black_1;
+    }
+  }
+  &__back-button {
+    background: none;
+    color: $black_1;
   }
 }
+.column-back-button {
+  background: $black_05;
+  border-radius: 15px 15px 0 0;
+  color: $white_1;
+}
 
+/* account */
+.account__header
+  >div {
+    background: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+	background: $white_05;
+}
+
+::-webkit-scrollbar:active {
+	width: 8px;
+	background: $bg_opacity_0;
+	&:hover {
+		background: $bg_opacity_0;
+	}
+}
