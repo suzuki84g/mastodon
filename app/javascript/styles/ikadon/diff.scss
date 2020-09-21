@@ -181,3 +181,16 @@ button.icon-button i.fa-retweet:hover {
     color: $green_1 !important;
   }
 }
+
+/* toggle */
+.react-toggle {
+  &--checked,
+  &--checked:hover:not(.react-toggle--disabled) {
+    .react-toggle-thumb {
+      border-color: $orange_1;
+    }
+    .react-toggle-track {
+      background-color: $orange_1;
+    }
+  }
+}
