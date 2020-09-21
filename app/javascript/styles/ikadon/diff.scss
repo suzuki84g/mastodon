@@ -23,6 +23,10 @@
     background: $pink_jagged;
     border-radius: 15px 15px 0 0;
     overflow:hidden;
+    a:hover {
+      background: $black_05;
+      color: $white_1;
+    }
   }
   &__inner {
     background: $dark_stripe;
@@ -62,17 +66,22 @@
     background: $gray_jagged;
     border-radius: 15px 15px 0 0;
     color: $black_1;
-    &__button {
+    &__button,
+    &:active {
       background: none;
       color: $black_1;
-      &:active, &:hover, &:focus {
-        background: none;
-        color: $black_1;
+      &:hover, &:focus {
+        background: $black_05;
+        border-radius: 0 15px 0 0;
+        color: $white_1;
       }
     }
     &__back-button {
       background: none;
       color: $black_1;
+    }
+    &__collapsible >div {
+      background: $dark_1;
     }
   }
   .column:nth-child(3) .column-header {
@@ -172,5 +181,3 @@ button.icon-button i.fa-retweet:hover {
     color: $green_1 !important;
   }
 }
-
-/* 'Toot' button */
