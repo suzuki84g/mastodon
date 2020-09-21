@@ -5,14 +5,13 @@
 .ui {
   background: $gray_stripe;
 }
-.column > .scrollable,
-.column-inline-form,
-.error-column,
-.regeneration-indicator,
-.empty-column-indicator,
-.notification__filter-bar >button {
-  background: $dark_stripe;
-}
+
+// 最近の追加要素の背景色、適用範囲を再検討
+// .column-inline-form,
+// .error-column,
+// .notification__filter-bar >button {
+//   background: $dark_stripe;
+// }
 
 /* drawer */
 .drawer {
@@ -78,7 +77,8 @@
 /* tab */
 .tabs-bar {
 	background: $pink_jagged;
-	border-radius: 15px 15px 0 0;
+  // SP対応で削除
+  // border-radius: 15px 15px 0 0;
 	border: none;
   overflow: hidden;
   &__link {
@@ -93,43 +93,39 @@
 }
 
 /* column */
-// advanced web interface
-.columns-area,
-.columns-area__panels {
-  .column-header {
-    background: $gray_jagged;
-    border-radius: 15px 15px 0 0;
+.column-header {
+  background: $gray_jagged;
+  border-radius: 15px 15px 0 0;
+  color: $black_1;
+  &__button,
+  &:active {
+    background: none;
     color: $black_1;
-    &__button,
-    &:active {
-      background: none;
-      color: $black_1;
-      &:hover, &:focus {
-        background: $black_05;
-        border-radius: 0 15px 0 0;
-        color: $white_1;
-      }
-    }
-    &__back-button {
-      background: none;
-      color: $black_1;
-    }
-    &__collapsible >div {
-      background: $dark_1;
+    &:hover, &:focus {
+      background: $black_05;
+      border-radius: 0 15px 0 0;
+      color: $white_1;
     }
   }
-  [aria-label="ホーム"],
-  [aria-label="Home"] {
-    .column-header {
-      background: $blue_jagged;
-    }
+  &__back-button {
+    background: none;
+    color: $black_1;
   }
-  [aria-label="ハイカラタイムライン"],
-  [aria-label="ローカルタイムライン"],
-  [aria-label="Local Time Line"] {
-    .column-header {
-      background: $yellow_jagged;
-    }
+  &__collapsible >div {
+    background: $dark_1;
+  }
+}
+[aria-label="ホーム"],
+[aria-label="Home"] {
+  .column-header {
+    background: $blue_jagged;
+  }
+}
+[aria-label="ハイカラタイムライン"],
+[aria-label="ローカルタイムライン"],
+[aria-label="Local Time Line"] {
+  .column-header {
+    background: $yellow_jagged;
   }
 }
 .column-back-button {
@@ -138,9 +134,12 @@
   color: $white_1;
 }
 .getting-started {
-  background: $dark_stripe;
   &__wrapper {
-    background: none;
+    background: $dark_stripe;
+  }
+  &__footer {
+    border-radius: 0 0 15px 15px;
+    background: $dark_stripe;
   }
 }
 .column-link {
@@ -152,6 +151,15 @@
 .column-subheading {
   background: $white_03;
   color: $black_1;
+}
+.column > .scrollable {
+  background: $dark_stripe;
+  border-radius: 0 0 15px 15px;
+}
+.empty-column-indicator {
+  background: $dark_stripe;
+  border-radius: 0 0 15px 15px;
+  color: $white_1;
 }
 
 /* account */
@@ -236,4 +244,19 @@ button.icon-button i.fa-retweet:hover {
   }
 }
 
+/* regeneration */
+.regeneration-indicator {
+	border-radius: 15px;
+	background: $dark_stripe;
+}
+
 /* SP */
+body.layout-single-column {
+  // 範囲は要修正
+  .compose-panel {
+    background: $dark_stripe;
+  }
+  .column-header {
+    border-radius: 0;
+  }
+}
