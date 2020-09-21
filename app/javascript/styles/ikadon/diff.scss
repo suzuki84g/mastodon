@@ -1,10 +1,10 @@
 // wrap
 // bodyのdarkに`$gray_stripe`を重ねている
+
+/* 汎用 */
 .ui {
   background: $gray_stripe;
 }
-
-/* column */
 .column > .scrollable,
 .column-inline-form,
 .error-column,
@@ -37,6 +37,39 @@
       background-position: left bottom;
       img {
         display: none;
+      }
+    }
+    .compose-form {
+      .reply-indicator {
+        background: $white_03;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        .reply-indicator {
+          &__display-name, &__content {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .button--block {
+    // 既存の入力文字を無効化
+    background: $orange_1;
+    border-radius: 15px;
+    font-size: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    &:before {
+      content: '　スプラ　';  //:hover時と文字数を揃えるため…
+      display: block;
+      font-size: 14px;
+    }
+    &:hover {
+      background: $purple_1;
+      &:before {
+        content: 'トゥーン！';
+        display: block;
+        font-size: 14px;
       }
     }
   }
