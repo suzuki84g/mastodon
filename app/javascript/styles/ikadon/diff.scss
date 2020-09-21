@@ -16,8 +16,8 @@
 
 /* drawer */
 .drawer {
-  .search {
-    background: $dark_stripe;
+  &__tab {
+    color: $black_1;
   }
   &__header {
     background: $pink_jagged;
@@ -30,7 +30,6 @@
       background: none;
       background-image: $ink;
       background-repeat: no-repeat;
-      // todo:PCレイアウトだとbottom指定で画像が消えるかも
       background-position: left bottom;
       img {
         display: none;
@@ -125,3 +124,7 @@
     background: $bg_opacity_0;
   }
 }
+
+/* icon-color */
+
+/* 'Toot' button */
