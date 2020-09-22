@@ -168,28 +168,20 @@
 // todo:Review確認 https://github.com/koba-lab/mastodon/pull/19/files/0279f73155c0dded8d4e7b889de3c7ae77bb013c#r492245593
 .icon-button {
   color: $white_1;
-  &.active {
-    color: $orange_1;
-  }
   &:hover, &:active, &:focus {
-    color: $orange_1
-  }
-  &.inverted {
-    &:hover, &:active, &:focus {
-      color: $orange_1
-    }
-  }
-}
-button.icon-button i.fa-retweet {
-  background-image: $retweet-default;
-}
-button.icon-button i.fa-retweet:hover {
-  background-image: $retweet-hover;
-}
-.star-icon.active {
-  color: $orange_1;
-  &.active {
     color: $orange_1;
+  }
+  &.active {
+    color: $orange_1 !important;
+  }
+  &.disabled:hover {
+    color: lighten($lighter-text-color, 20%);
+  }
+  i.fa-retweet {
+    background-image: $boost-white !important;
+    &:hover, &:active, &:focus {
+      background-image: $boost-orange !important;
+    }
   }
 }
 .notification__message {
