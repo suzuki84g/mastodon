@@ -184,6 +184,14 @@
     }
   }
 }
+.reply-indicator__cancel {
+  .icon-button.inverted {
+    color: $white_1;
+    &:hover, &:active, &:focus {
+      color: $orange_1
+    }
+  }
+}
 .notification__message {
   .fa-star {
     color: $yellow_1;
