@@ -1,4 +1,4 @@
-/* 汎用 */
+/* 背景色 */
 .ui {
   background: $gray_stripe;
 }
@@ -8,6 +8,8 @@
 }
 
 /* drawer */
+// todo:https://github.com/koba-lab/mastodon/pull/19#discussion_r493009393
+// 入力テキスト周りのColumnを移植する。
 .drawer {
   &__tab {
     color: $black_1;
@@ -47,6 +49,7 @@
   }
   .button--block {
     background: $orange_1;
+    border-radius: 15px;
     &:hover {
       background: $purple_1;
     }
@@ -172,6 +175,8 @@
 }
 
 /* icon-color */
+// todo:https://github.com/koba-lab/mastodon/pull/19#discussion_r493006242
+// 鍵トゥートのアイコンがいまいち
 .icon-button {
   color: $white_1;
   &:hover, &:active, &:focus {
@@ -230,6 +235,9 @@
 }
 
 /* layout-single-column */
+// todo:うどんさんの案を引用するところから
+// https://github.com/koba-lab/mastodon/pull/19#issuecomment-696844136
+
 /* tab */
 .tabs-bar {
   background: $pink_jagged;
