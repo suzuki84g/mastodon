@@ -1,0 +1,262 @@
+// wrap
+// bodyのdarkに`$gray_stripe`を重ねている
+
+/* 汎用 */
+.ui {
+  background: $gray_stripe;
+}
+
+// 最近の追加要素の背景色、適用範囲を再検討
+// .column-inline-form,
+// .error-column,
+// .notification__filter-bar >button {
+//   background: $dark_stripe;
+// }
+
+/* drawer */
+.drawer {
+  &__tab {
+    color: $black_1;
+  }
+  &__header {
+    background: $pink_jagged;
+    border-radius: 15px 15px 0 0;
+    overflow:hidden;
+    a:hover {
+      background: $black_05;
+      color: $white_1;
+    }
+  }
+  &__inner {
+    background: $dark_stripe;
+    &__mastodon {
+      background: none;
+      background-image: $ink;
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      img {
+        display: none;
+      }
+    }
+    .compose-form {
+      .reply-indicator {
+        background: $white_03;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        .reply-indicator {
+          &__display-name, &__content {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .button--block {
+    // 既存の入力文字を無効化
+    background: $orange_1;
+    border-radius: 15px;
+    font-size: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    &:before {
+      content: '　スプラ　';  //:hover時と文字数を揃えるため…
+      display: block;
+      font-size: 14px;
+    }
+    &:hover {
+      background: $purple_1;
+      &:before {
+        content: 'トゥーン！';
+        display: block;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+/* tab */
+.tabs-bar {
+	background: $pink_jagged;
+  // SP対応で削除
+  // border-radius: 15px 15px 0 0;
+	border: none;
+  overflow: hidden;
+  &__link {
+    color: $black_1;
+    border: none;
+    &:active, &:hover, &:focus {
+      background: $black_05;
+      border: none;
+      color: $white_1;
+    }
+  }
+}
+
+/* column */
+.column-header {
+  background: $gray_jagged;
+  border-radius: 15px 15px 0 0;
+  color: $black_1;
+  &__button,
+  &:active {
+    background: none;
+    color: $black_1;
+    &:hover, &:focus {
+      background: $black_05;
+      border-radius: 0 15px 0 0;
+      color: $white_1;
+    }
+  }
+  &__back-button {
+    background: none;
+    color: $black_1;
+  }
+  &__collapsible >div {
+    background: $dark_1;
+  }
+}
+[aria-label="ホーム"],
+[aria-label="Home"] {
+  .column-header {
+    background: $blue_jagged;
+  }
+}
+[aria-label="ハイカラタイムライン"],
+[aria-label="ローカルタイムライン"],
+[aria-label="Local Time Line"] {
+  .column-header {
+    background: $yellow_jagged;
+  }
+}
+.column-back-button {
+  background: $black_05;
+  border-radius: 15px 15px 0 0;
+  color: $white_1;
+}
+.getting-started {
+  &__wrapper {
+    background: $dark_stripe;
+  }
+  &__footer {
+    border-radius: 0 0 15px 15px;
+    background: $dark_stripe;
+  }
+}
+.column-link {
+  background: $bg_opacity_0;
+  &:hover {
+    background: $orange_stripe;
+  }
+}
+.column-subheading {
+  background: $white_03;
+  color: $black_1;
+}
+.column > .scrollable {
+  background: $dark_stripe;
+  border-radius: 0 0 15px 15px;
+}
+.empty-column-indicator {
+  background: $dark_stripe;
+  border-radius: 0 0 15px 15px;
+  color: $white_1;
+}
+
+/* account */
+.account__header
+  >div {
+    background: none;
+}
+
+/* search */
+.search {
+  &__input {
+    background: $dark_stripe;
+    &:focus {
+      background: $dark_stripe;
+    }
+  }
+}
+
+/* scrollbar */
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+  background: $white_05;
+}
+
+::-webkit-scrollbar:active {
+  width: 8px;
+  background: $bg_opacity_0;
+  &:hover {
+    background: $bg_opacity_0;
+  }
+}
+
+/* icon-color */
+.icon-button {
+  color: $white_1;
+  &.active {
+    color: $orange_1 !important;
+  }
+  &:hover, &:active, &:focus {
+    color: $orange_1
+  }
+  &.inverted {
+    &:hover, &:active, &:focus {
+      color: $orange_1
+    }
+  }
+}
+button.icon-button i.fa-retweet {
+  background-image: $retweet-default;
+}
+button.icon-button i.fa-retweet:hover {
+  background-image: $retweet-hover;
+}
+.star-icon.active {
+  color: $orange_1;
+  &.active {
+    color: $orange_1 !important;
+  }
+}
+.notification__message {
+  .fa-star {
+    color: $yellow_1 !important;
+  }
+  .fa-user-plus {
+    color: $lightblue_1 !important;
+  }
+  .fa-retweet {
+    color: $green_1 !important;
+  }
+}
+
+/* toggle */
+.react-toggle {
+  &--checked,
+  &--checked:hover:not(.react-toggle--disabled) {
+    .react-toggle-thumb {
+      border-color: $orange_1;
+    }
+    .react-toggle-track {
+      background-color: $orange_1;
+    }
+  }
+}
+
+/* regeneration */
+.regeneration-indicator {
+	border-radius: 15px;
+	background: $dark_stripe;
+}
+
+/* SP */
+body.layout-single-column {
+  // 範囲は要修正
+  .compose-panel {
+    background: $dark_stripe;
+  }
+  .column-header {
+    border-radius: 0;
+  }
+}

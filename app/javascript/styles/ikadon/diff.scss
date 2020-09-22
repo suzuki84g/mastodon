@@ -2,11 +2,8 @@
 .ui {
   background: $gray_stripe;
 }
-.column > .scrollable,
 .column-inline-form,
 .error-column,
-.regeneration-indicator,
-.empty-column-indicator,
 .notification__filter-bar > button {
   background: $dark_stripe;
 }
@@ -120,6 +117,15 @@
   background: $white_03;
   color: $black_1;
 }
+.empty-column-indicator {
+  background: $dark_stripe;
+  border-radius: 0 0 15px 15px;
+  color: $white_1;
+}
+.column > .scrollable {
+  background: $dark_stripe;
+  border-radius: 0 0 15px 15px;
+}
 
 /* account */
 .account__header > div {
@@ -200,6 +206,12 @@
       background-color: $orange_1;
     }
   }
+}
+
+/* regeneration */
+.regeneration-indicator {
+	border-radius: 15px;
+	background: $dark_stripe;
 }
 
 /* layout-single-column */
