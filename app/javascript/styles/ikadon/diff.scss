@@ -57,26 +57,8 @@
   }
 }
 
-/* tab */
-.tabs-bar {
-	background: $pink_jagged;
-	border-radius: 15px 15px 0 0;
-	border: none;
-  overflow: hidden;
-  &__link {
-    color: $black_1;
-    border: none;
-    &:active, &:hover, &:focus {
-      background: $black_05;
-      border: none;
-      color: $white_1;
-    }
-  }
-}
-
 /* column */
 // advanced web interface
-// todo:Review確認から `https://github.com/koba-lab/mastodon/pull/19/files/0279f73155c0dded8d4e7b889de3c7ae77bb013c#r491963901`
 .columns-area {
   .column-header {
     background: $gray_jagged;
@@ -212,6 +194,24 @@
     }
     .react-toggle-track {
       background-color: $orange_1;
+    }
+  }
+}
+
+/* layout-single-column */
+/* tab */
+.tabs-bar {
+  background: $pink_jagged;
+  border-radius: 15px 15px 0 0;
+  border: none;
+  overflow: hidden;
+  &__link {
+    color: $black_1;
+    border: none;
+    &:active, &:hover, &:focus {
+      background: $black_05;
+      border: none;
+      color: $white_1;
     }
   }
 }
