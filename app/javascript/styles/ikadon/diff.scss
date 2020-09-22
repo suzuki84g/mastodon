@@ -14,9 +14,8 @@
   }
   &__header {
     background: $pink_jagged;
-    border-radius: 30px;
+    border-radius: 15px;
     overflow:hidden;
-    padding: 0 10px;
     a:hover {
       background: $black_05;
       color: $white_1;
@@ -151,16 +150,10 @@
 /* search */
 .search {
   &__input {
-    border-radius: 30px;
+    border-radius: 15px;
     background: $dark_stripe;
-    padding: 15px 40px 15px 25px;
     &:focus {
       background: $dark_stripe;
-    }
-  }
-  &__icon {
-    .fa {
-      right: 20px;
     }
   }
 }
