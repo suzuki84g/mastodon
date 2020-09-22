@@ -125,6 +125,9 @@
 .column > .scrollable {
   background: $dark_stripe;
   border-radius: 0 0 15px 15px;
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
 }
 
 /* account */
