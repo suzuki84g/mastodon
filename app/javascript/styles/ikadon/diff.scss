@@ -32,18 +32,6 @@
         display: none;
       }
     }
-    .compose-form {
-      .reply-indicator {
-        background: $white_03;
-        border-radius: 4px;
-        margin-bottom: 15px;
-        .reply-indicator {
-          &__display-name, &__content {
-            color: $white_1
-          }
-        }
-      }
-    }
   }
   &__pager {
     border-radius: 15px;
@@ -162,6 +150,46 @@
   }
 }
 
+// 入力欄
+.compose-form {
+  .reply-indicator {
+    background: $white_03;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    .reply-indicator {
+      &__display-name, &__content {
+        color: $white_1
+      }
+    }
+  }
+  .spoiler-input__input {
+    border-radius: 11px;
+  }
+}
+
+.compose-form__modifiers {
+	background: none;
+	+ div {
+		flex-wrap: wrap;
+		align-items: baseline;
+	}
+}
+
+.autosuggest-textarea__textarea {
+  border-radius: 15px;
+}
+
+
+
+
+// トゥートのアンケートの回答のグラフ部分の装飾
+.poll__chart {
+  background: darken($lightblue_1, 14%);
+  &.leading {
+    background: $lightblue_1;
+  }
+}
+
 /* scrollbar */
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb:hover {
@@ -243,6 +271,10 @@
 // トゥート内のシンタックスハイライトを装飾
 .hljs {
   background: $black_05;
+  border-radius: 15px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* layout-single-column */
