@@ -33,13 +33,6 @@
   &__pager {
     border-radius: 15px;
   }
-  .button--block {
-    background: $orange_1;
-    border-radius: 15px;
-    &:hover {
-      background: $purple_1;
-    }
-  }
 }
 
 // アバター画像
@@ -47,10 +40,8 @@
   border-radius: 15px;
 }
 
-
 /* column */
 // advanced web interface
-
 .column-header {
   background: $gray_jagged;
   border-radius: 15px 15px 0 0;
@@ -184,8 +175,18 @@
   .emoji-button {
     padding: 7px 7px 2px 2px;
   }
+  & &__autosuggest-wrapper {
+    border-radius: 15px 15px 0 0;
+  }
   & &__buttons-wrapper {
     border-radius: 0 0 15px 15px;
+  }
+  .button--block {
+    background: $orange_1;
+    border-radius: 15px;
+    &:hover {
+      background: $purple_1;
+    }
   }
 }
 
@@ -195,10 +196,6 @@
 		flex-wrap: wrap;
 		align-items: baseline;
 	}
-}
-
-.autosuggest-textarea__textarea {
-  border-radius: 15px;
 }
 
 // トゥートのアンケートの回答のグラフ部分の装飾
@@ -334,18 +331,28 @@
   .ui {
       background: $dark_1;
   }
-  .search__input, .scrollable, .navigation-bar, .compose-form, .navigation-panel, .getting-started__footer {
-    background: $dark_stripe;
-  }
-  .column-link--transparent {
-    &.active {
-      color: $orange_1;
+  // .search__input, .scrollable, .navigation-bar, .compose-form, .navigation-panel, .getting-started__footer {
+  //   background: $dark_stripe;
+  // }
+  .compose-panel {
+    .search__input {
+      background: $dark_stripe;
     }
-    &:hover {
-      color: $white_1;
+    .navigation-bar,
+    .compose-form,
+    .getting-started__footer {
+      background: none;
+    }
+  }
+  .navigation-panel {
+    .column-link--transparent {
+      border-radius: 15px;
+      &.active {
+        color: $orange_1;
+      }
+      &:hover {
+        color: $white_1;
+      }
     }
   }
 }
-
-// その他
-// 初動で選択されてる`__link.active`背景が青いのが気になる
