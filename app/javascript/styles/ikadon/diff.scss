@@ -8,9 +8,6 @@
 }
 
 /* drawer */
-// todo:https://github.com/koba-lab/mastodon/pull/19#discussion_r493009393
-// 入力テキスト周りのColumnを移植する。
-// ユーザーアカウントの情報の辺りも。
 .drawer {
   &__tab {
     color: $black_1;
@@ -44,6 +41,12 @@
     }
   }
 }
+
+// アバター画像
+.account__avatar {
+  border-radius: 15px;
+}
+
 
 /* column */
 // advanced web interface
@@ -94,6 +97,11 @@
   background: $dark_stripe;
   > button {
     background: $white_01;
+  }
+  > button.active {
+    ::after {
+      border-bottom-color: rgb(0, 0, 0);
+    }
   }
 }
 .column-back-button {
@@ -165,6 +173,17 @@
   .spoiler-input__input {
     border-radius: 11px;
   }
+  .autosuggest-textarea {
+    &__textarea {
+      border-radius: 15px 15px 0 0;
+    }
+  }
+  .emoji-button {
+    padding: 7px 7px 2px 2px;
+  }
+  & &__buttons-wrapper {
+    border-radius: 0 0 15px 15px;
+  }
 }
 
 .compose-form__modifiers {
@@ -178,9 +197,6 @@
 .autosuggest-textarea__textarea {
   border-radius: 15px;
 }
-
-
-
 
 // トゥートのアンケートの回答のグラフ部分の装飾
 .poll__chart {
@@ -204,8 +220,12 @@
 }
 
 /* icon-color */
-// todo:https://github.com/koba-lab/mastodon/pull/19#discussion_r493006242
-// 鍵トゥートのアイコンがいまいち
+/* toot option icon */
+.compose-form__buttons {
+  background: $gray_1;
+  box-shadow: none;
+  border-radius: 15px;
+}
 .icon-button {
   color: $white_1;
   &:hover, &:active, &:focus {
@@ -272,6 +292,7 @@
 .hljs {
   background: $black_05;
   border-radius: 15px;
+  padding: 0.6em;
   &::-webkit-scrollbar {
     display: none;
   }
