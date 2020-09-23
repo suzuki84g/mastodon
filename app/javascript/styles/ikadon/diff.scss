@@ -235,6 +235,16 @@
   background: $dark_stripe;
 }
 
+// アクティブメッセージ
+.detailed-status, .detailed-status__action-bar {
+  background: none;
+}
+
+// トゥート内のシンタックスハイライトを装飾
+.hljs {
+  background: $black_05;
+}
+
 /* layout-single-column */
 // todo:うどんさんの案を引用するところから
 // https://github.com/koba-lab/mastodon/pull/19#issuecomment-696844136
