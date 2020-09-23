@@ -15,7 +15,7 @@
   &__header {
     background: $pink_jagged;
     border-radius: 15px;
-    overflow:hidden;
+    overflow: hidden;
     a:hover {
       background: $black_05;
       color: $white_1;
@@ -50,47 +50,50 @@
 
 /* column */
 // advanced web interface
-.columns-area {
-  .column-header {
-    background: $gray_jagged;
-    border-radius: 15px 15px 0 0;
+
+.column-header {
+  background: $gray_jagged;
+  border-radius: 15px 15px 0 0;
+  color: $black_1;
+  a:hover {
+    background: $black_05;
+    color: $white_1;
+  }
+  &__button {
+    background: none;
     color: $black_1;
-    &__button {
-      background: none;
-      color: $black_1;
-      transition: $transition;
-      &:hover, &:focus {
-        background: $black_05;
-        color: $white_1;
-        outline: none;
-      }
-    }
-    &__back-button {
-      background: none;
-      color: $black_1;
-    }
-    &__collapsible > div {
-      background: $dark_1;
-    }
-    &.active {
-      .column-header__icon {
-        color: $blueGray_1;
-        text-shadow: 0 0 10px rgba($blueGray_1, 0.4);
-      }
+    transition: $transition;
+    &:hover, &:focus {
+      background: $black_05;
+      color: $white_1;
+      outline: none;
     }
   }
-  [aria-label="ホーム"],
-  [aria-label="Home"] {
-    .column-header {
-      background: $blue_jagged;
+  &__back-button {
+    background: none;
+    color: $black_1;
+  }
+  &__collapsible > div {
+    background: $dark_1;
+  }
+  &.active {
+    .column-header__icon {
+      color: $blueGray_1;
+      text-shadow: 0 0 10px rgba($blueGray_1, 0.4);
     }
   }
-  [aria-label="ハイカラタイムライン"],
-  [aria-label="ローカルタイムライン"],
-  [aria-label="Local Time Line"] {
-    .column-header {
-      background: $yellow_jagged;
-    }
+}
+[aria-label="ホーム"],
+[aria-label="Home"] {
+  .column-header {
+    background: $blue_jagged;
+  }
+}
+[aria-label="ハイカラタイムライン"],
+[aria-label="ローカルタイムライン"],
+[aria-label="Local Time Line"] {
+  .column-header {
+    background: $yellow_jagged;
   }
 }
 .notification__filter-bar {
@@ -303,14 +306,21 @@
 // https://github.com/koba-lab/mastodon/pull/19#issuecomment-696844136
 
 /* tab */
+.tabs-bar__wrapper {
+  background: $dark_1;
+}
 .tabs-bar {
   background: $pink_jagged;
-  border-radius: 15px 15px 0 0;
+  border-radius: 15px;
   border: none;
   overflow: hidden;
   &__link {
     color: $black_1;
     border: none;
+    &.active {
+      color: $green_1;
+      border-bottom-color: $green_1;
+    }
     &:active, &:hover, &:focus {
       background: $black_05;
       border: none;
@@ -318,3 +328,24 @@
     }
   }
 }
+
+// シンプルUI
+.layout-single-column {
+  .ui {
+      background: $dark_1;
+  }
+  .search__input, .scrollable, .navigation-bar, .compose-form, .navigation-panel, .getting-started__footer {
+    background: $dark_stripe;
+  }
+  .column-link--transparent {
+    &.active {
+      color: $orange_1;
+    }
+    &:hover {
+      color: $white_1;
+    }
+  }
+}
+
+// その他
+// 初動で選択されてる`__link.active`背景が青いのが気になる
