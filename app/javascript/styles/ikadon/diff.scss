@@ -96,9 +96,6 @@
   &.active {
     color: $orange_1 !important;
   }
-  &.disabled:hover {
-    color: lighten($lighter-text-color, 20%);
-  }
   i.fa-retweet {
     background-image: $boost-white !important;
     &:hover, &:active, &:focus {
