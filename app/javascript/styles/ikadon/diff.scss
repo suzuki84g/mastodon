@@ -86,7 +86,9 @@
   box-shadow: none;
   border-radius: 15px;
 }
-.icon-button {
+.icon-button,
+.icon-button.inverted,
+.text-icon-button {
   color: $white_1;
   &:hover, &:active, &:focus {
     color: $orange_1;
