@@ -78,13 +78,6 @@
       background: $purple_1;
     }
   }
-  .compose-form__modifiers {
-    background: none;
-    + div {
-      flex-wrap: wrap;
-      align-items: baseline;
-    }
-  }
 }
 
 /* icon and button */
