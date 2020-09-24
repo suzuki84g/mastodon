@@ -1,13 +1,139 @@
-/* 背景色 */
+/* general*/
+
+// 背景色
 .ui {
   background: $gray_stripe;
 }
+
+// 他Themeに追従して変更
 .column-inline-form,
 .error-column {
   background: $dark_stripe;
 }
 
-/* drawer */
+// scrollbar
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+  background: $white_05;
+}
+::-webkit-scrollbar:active {
+  width: 8px;
+  background: $bg_opacity_0;
+  &:hover {
+    background: $bg_opacity_0;
+  }
+}
+
+/* component */
+
+// アバターアイコン
+.account__avatar {
+  border-radius: 15px;
+}
+
+// search
+.search {
+  &__input {
+    border-radius: 15px;
+    background: $dark_stripe;
+    &:focus {
+      background: $dark_stripe;
+    }
+  }
+}
+
+// 入力欄
+.compose-form {
+  .reply-indicator {
+    background: $white_03;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    .reply-indicator {
+      &__display-name, &__content {
+        color: $white_1
+      }
+    }
+  }
+  .spoiler-input__input {
+    border-radius: 11px;
+  }
+  .autosuggest-textarea {  // SPモード対応
+    &__textarea {
+      border-radius: 15px 15px 0 0;
+    }
+  }
+  .emoji-button {
+    padding: 7px 7px 2px 2px;
+  }
+  & &__autosuggest-wrapper {
+    border-radius: 15px 15px 0 0;
+  }
+  & &__buttons-wrapper {
+    border-radius: 0 0 15px 15px;
+  }
+  button.button--block {
+    background: $orange_1;
+    border-radius: 15px;
+    &:hover {
+      background: $purple_1;
+    }
+  }
+  .compose-form__modifiers {
+    background: none;
+    + div {
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+  }
+}
+
+/* icon and button */
+.compose-form__buttons {
+  background: $gray_1;
+  box-shadow: none;
+  border-radius: 15px;
+}
+.icon-button {
+  color: $white_1;
+  &:hover, &:active, &:focus {
+    color: $orange_1;
+  }
+  &.active {
+    color: $orange_1 !important;
+  }
+  &.disabled:hover {
+    color: lighten($lighter-text-color, 20%);
+  }
+  i.fa-retweet {
+    background-image: $boost-white !important;
+    &:hover, &:active, &:focus {
+      background-image: $boost-orange !important;
+    }
+  }
+}
+.reply-indicator__cancel {
+  .icon-button.inverted {
+    color: $white_1;
+    &:hover, &:active, &:focus {
+      color: $orange_1
+    }
+  }
+}
+.notification__message {
+  .fa-star {
+    color: $yellow_1;
+  }
+  .fa-user-plus {
+    color: $lightblue_1;
+  }
+  .fa-retweet {
+    color: $green_1;
+  }
+}
+
+/* layout-multiple-columns */
+
+// drawer
 .drawer {
   &__tab {
     color: $black_1;
@@ -35,13 +161,7 @@
   }
 }
 
-// アバター画像
-.account__avatar {
-  border-radius: 15px;
-}
-
-/* column */
-// advanced web interface
+// column全般
 .column-header {
   background: $gray_jagged;
   border-radius: 15px 15px 0 0;
@@ -74,6 +194,8 @@
     }
   }
 }
+
+// 配色の上書き
 [aria-label="ホーム"],
 [aria-label="Home"] {
   .column-header {
@@ -87,6 +209,7 @@
     background: $yellow_jagged;
   }
 }
+
 .notification__filter-bar {
   background: $dark_stripe;
   > button {
@@ -136,68 +259,6 @@
   }
 }
 
-/* account */
-.account__header > div {
-  background: none;
-}
-
-/* search */
-.search {
-  &__input {
-    border-radius: 15px;
-    background: $dark_stripe;
-    &:focus {
-      background: $dark_stripe;
-    }
-  }
-}
-
-// 入力欄
-.compose-form {
-  .reply-indicator {
-    background: $white_03;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    .reply-indicator {
-      &__display-name, &__content {
-        color: $white_1
-      }
-    }
-  }
-  .spoiler-input__input {
-    border-radius: 11px;
-  }
-  .autosuggest-textarea {
-    &__textarea {
-      border-radius: 15px 15px 0 0;
-    }
-  }
-  .emoji-button {
-    padding: 7px 7px 2px 2px;
-  }
-  & &__autosuggest-wrapper {
-    border-radius: 15px 15px 0 0;
-  }
-  & &__buttons-wrapper {
-    border-radius: 0 0 15px 15px;
-  }
-  .button--block {
-    background: $orange_1;
-    border-radius: 15px;
-    &:hover {
-      background: $purple_1;
-    }
-  }
-}
-
-.compose-form__modifiers {
-	background: none;
-	+ div {
-		flex-wrap: wrap;
-		align-items: baseline;
-	}
-}
-
 // トゥートのアンケートの回答のグラフ部分の装飾
 .poll__chart {
   background: darken($lightblue_1, 14%);
@@ -206,65 +267,30 @@
   }
 }
 
-/* scrollbar */
-::-webkit-scrollbar-thumb,
-::-webkit-scrollbar-thumb:hover {
-  background: $white_05;
-}
-::-webkit-scrollbar:active {
-  width: 8px;
-  background: $bg_opacity_0;
-  &:hover {
-    background: $bg_opacity_0;
-  }
-}
-
-/* icon-color */
-/* toot option icon */
-.compose-form__buttons {
-  background: $gray_1;
-  box-shadow: none;
-  border-radius: 15px;
-}
-.icon-button {
-  color: $white_1;
-  &:hover, &:active, &:focus {
-    color: $orange_1;
-  }
-  &.active {
-    color: $orange_1 !important;
-  }
-  &.disabled:hover {
-    color: lighten($lighter-text-color, 20%);
-  }
-  i.fa-retweet {
-    background-image: $boost-white !important;
-    &:hover, &:active, &:focus {
-      background-image: $boost-orange !important;
+// アカウント詳細Column
+.account__header > div {
+  background: none;
+  button.logo-button {
+    background: $orange_1;
+    border-radius: 15px;
+    &:hover {
+      background: $purple_1;
     }
   }
 }
-.reply-indicator__cancel {
-  .icon-button.inverted {
-    color: $white_1;
-    &:hover, &:active, &:focus {
-      color: $orange_1
+.account__section-headline {
+  background: $dark_stripe;
+  > a {
+    background: $white_01;
+  }
+  > a.active {
+    ::after {
+      border-bottom-color: rgb(0, 0, 0);
     }
   }
 }
-.notification__message {
-  .fa-star {
-    color: $yellow_1;
-  }
-  .fa-user-plus {
-    color: $lightblue_1;
-  }
-  .fa-retweet {
-    color: $green_1;
-  }
-}
 
-/* toggle */
+// toggle
 .react-toggle {
   &--checked,
   &--checked:hover:not(.react-toggle--disabled) {
@@ -277,7 +303,7 @@
   }
 }
 
-/* regeneration */
+// regeneration
 .regeneration-indicator {
   border-radius: 15px;
   background: $dark_stripe;
@@ -299,10 +325,7 @@
 }
 
 /* layout-single-column */
-// todo:うどんさんの案を引用するところから
-// https://github.com/koba-lab/mastodon/pull/19#issuecomment-696844136
-
-/* tab */
+// tab
 .tabs-bar__wrapper {
   background: $dark_1;
 }
@@ -325,15 +348,11 @@
     }
   }
 }
-
-// シンプルUI
+// シンプルUI用の上書き
 .layout-single-column {
   .ui {
       background: $dark_1;
   }
-  // .search__input, .scrollable, .navigation-bar, .compose-form, .navigation-panel, .getting-started__footer {
-  //   background: $dark_stripe;
-  // }
   .compose-panel {
     .search__input {
       background: $dark_stripe;
