@@ -177,7 +177,7 @@
   }
   &__back-button {
     background: none;
-    color: $black_1;
+    color: $black_1 !important;
   }
   &__collapsible > div {
     background: $dark_1;
@@ -215,6 +215,11 @@
       border-bottom-color: $black_1;
     }
   }
+}
+
+// DMの装飾をデフォルトから修正
+.status.status-direct:not(.read) {
+  background: $white_01;
 }
 
 // 値がないカラムの'column-header'に乗っかるbutton
