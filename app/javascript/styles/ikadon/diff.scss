@@ -330,8 +330,8 @@
     color: $black_1;
     border: none;
     &.active {
-      color: $green_1;
-      border-bottom-color: $green_1;
+      color: $white_1;
+      border-bottom-color: $white_1;
     }
     &:active, &:hover, &:focus {
       background: $black_05;
