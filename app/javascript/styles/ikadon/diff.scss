@@ -309,8 +309,9 @@
 // トゥート内のシンタックスハイライトを装飾
 .hljs {
   background: $black_05;
-  border-radius: 15px;
-  padding: 0.6em;
+  border-radius: 5px;
+  padding: 0.3em;
+  margin: 0.3em;
   &::-webkit-scrollbar {
     display: none;
   }
