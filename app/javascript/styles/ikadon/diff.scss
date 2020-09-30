@@ -216,11 +216,14 @@
     }
   }
 }
+
+// 値がないカラムの'column-header'に乗っかるbutton
 .column-back-button {
-  background: $black_05;
+  background: $gray_jagged;
   border-radius: 15px 15px 0 0;
-  color: $white_1;
+  color: $black_1;
 }
+
 .getting-started {
   background: $dark_stripe;
   border-radius: 0 0 15px 15px;
