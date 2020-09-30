@@ -324,7 +324,7 @@
 }
 .tabs-bar {
   background: $pink_jagged;
-  border-radius: 15px;
+  border-radius: 0px;
   border: none;
   overflow: hidden;
   &__link {
@@ -346,6 +346,9 @@
   .ui {
       background: $dark_1;
   }
+  .column-header {
+    border-radius: 0px;
+  }
   .compose-panel {
     .search__input {
       background: $dark_stripe;
@@ -358,7 +361,7 @@
   }
   .navigation-panel {
     .column-link--transparent {
-      border-radius: 15px;
+      border-radius: 0px;
       &.active {
         color: $orange_1;
       }
