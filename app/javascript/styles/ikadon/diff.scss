@@ -48,10 +48,11 @@
     background: $white_01;
     border-radius: 4px;
     margin-bottom: 15px;
-    .reply-indicator {
-      &__display-name, &__content {
-        color: $white_1
-      }
+    .reply-indicator__display-name {
+      color: $white_1
+    }
+    .reply-indicator__content {
+      color: $white_1;
     }
   }
   .spoiler-input__input {
@@ -84,7 +85,7 @@
 .compose-form__buttons {
   background: $gray_1;
   box-shadow: none;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .icon-button,
 .icon-button.inverted,
