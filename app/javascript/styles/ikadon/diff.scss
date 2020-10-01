@@ -58,11 +58,6 @@
   .spoiler-input__input {
     border-radius: 11px;
   }
-  .autosuggest-textarea {  // SPモード対応
-    &__textarea {
-      border-radius: 15px 15px 0 0;
-    }
-  }
   .emoji-button {
     padding: 7px 7px 2px 2px;
   }
@@ -356,20 +351,38 @@
 // シンプルUI用の上書き
 .layout-single-column {
   .ui {
-      background: $dark_1;
+    background: $dark_1;
+    .compose-form {
+      button.button--block {
+        border-radius: 5px;
+      }
+    }
   }
   .column-header {
     border-radius: 0px;
   }
   .compose-panel {
     .search__input {
-      border-radius: 0px;
+      border-radius: 5px;
       background: $dark_stripe;
     }
     .navigation-bar,
     .compose-form,
     .getting-started__footer {
       background: none;
+    }
+    // SP対応用の記述
+    .compose-form {
+      .autosuggest-textarea {
+        &__textarea {
+          border-radius: 0;
+        }
+      }
+      .compose-form {
+        &__autosuggest-wrapper {
+        border-radius: 0;
+        }
+      }
     }
   }
   .navigation-panel {
@@ -383,4 +396,8 @@
       }
     }
   }
+  .compose-form__buttons-wrapper {
+    border-radius: 0;
+  }
 }
+
