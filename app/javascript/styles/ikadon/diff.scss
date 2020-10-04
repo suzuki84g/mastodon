@@ -268,14 +268,19 @@
 }
 
 // アカウント詳細Column
-.account__header > div {
-  background: none;
-  button.logo-button {
-    background: $orange_1;
-    border-radius: 15px;
-    &:hover {
-      background: $purple_1;
+.account__header {
+  > div {
+    background: none;
+    button.logo-button {
+      background: $orange_1;
+      border-radius: 15px;
+      &:hover {
+        background: $purple_1;
+      }
     }
+  }
+  .account__header__image {
+    background: $dark_1;
   }
 }
 .account__section-headline {
