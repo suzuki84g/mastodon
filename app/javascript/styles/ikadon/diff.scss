@@ -354,16 +354,16 @@
     background: $dark_1;
     .compose-form {
       button.button--block {
-        border-radius: 5px;
+        border-radius: 0;
       }
     }
   }
   .column-header {
-    border-radius: 0px;
+    border-radius: 0;
   }
   .compose-panel {
     .search__input {
-      border-radius: 5px;
+      border-radius: 0;
       background: $dark_stripe;
     }
     .navigation-bar,
@@ -373,21 +373,24 @@
     }
     // SP対応用の記述
     .compose-form {
-      .autosuggest-textarea {
-        &__textarea {
-          border-radius: 0;
-        }
-      }
+      // .autosuggest-textarea {
+      //   &__textarea {
+      //     border-radius: 5px;
+      //   }
+      // }
       .compose-form {
         &__autosuggest-wrapper {
         border-radius: 0;
         }
       }
     }
+    .compose-form__buttons {
+      border-radius: 0;
+    }
   }
   .navigation-panel {
     .column-link--transparent {
-      border-radius: 0px;
+      border-radius: 0;
       &.active {
         color: $orange_1;
       }
