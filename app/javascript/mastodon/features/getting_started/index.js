@@ -97,7 +97,6 @@ class GettingStarted extends ImmutablePureComponent {
     let height = (multiColumn) ? 0 : 60;
 
     if (multiColumn) {
-      // 計算式の確認
       const columnLinkCount = 3;
       navItems.push(
         <ColumnSubheading key={i++} text={intl.formatMessage(messages.discover)} />,
@@ -106,7 +105,7 @@ class GettingStarted extends ImmutablePureComponent {
         <ColumnLink key={i++} icon='globe' text={intl.formatMessage(messages.public_timeline)} to='/timelines/public' />,
       );
 
-      height += 34 + 48*2;
+      height += 34 + 48*columnLinkCount;
 
       if (profile_directory) {
         navItems.push(
@@ -120,7 +119,7 @@ class GettingStarted extends ImmutablePureComponent {
         <ColumnSubheading key={i++} text={intl.formatMessage(messages.personal)} />,
       );
 
-      height += 34*2 + 48*columnLinkCount;
+      height += 34;
     } else if (profile_directory) {
       navItems.push(
         <ColumnLink key={i++} icon='address-book' text={intl.formatMessage(messages.profile_directory)} to='/directory' />,
