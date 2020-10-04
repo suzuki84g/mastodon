@@ -407,4 +407,12 @@
     border-radius: 0;
   }
 }
+// プロフィール編集のボタン
+.account__header {
+  > div {
+    button.logo-button {
+      border-radius: 4px;
+    }
+  }
+}
 
