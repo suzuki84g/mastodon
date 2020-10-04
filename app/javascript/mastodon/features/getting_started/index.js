@@ -97,6 +97,7 @@ class GettingStarted extends ImmutablePureComponent {
     let height = (multiColumn) ? 0 : 60;
 
     if (multiColumn) {
+      // 計算式の確認
       const columnLinkCount = 3;
       navItems.push(
         <ColumnSubheading key={i++} text={intl.formatMessage(messages.discover)} />,
